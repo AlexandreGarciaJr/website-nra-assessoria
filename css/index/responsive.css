@@ -1,0 +1,110 @@
+/* =============================================
+       RESPONSIVE
+    ============================================= */
+@media (max-width: 1100px) {
+  .sobre-inner {
+    gap: 4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .sobre-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .serv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .outros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 0 1.5rem;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Seções principais — padding lateral e vertical uniformes */
+  #sobre,
+  #consultoria,
+  footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  #sobre,
+  #consultoria {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  /* Serviços: o padding lateral vive em .serv-inner e .outros-inner */
+  #servicos {
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
+
+  .serv-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .serv-inner .section-header {
+    margin-bottom: 3rem;
+  }
+
+  /* Outros Serviços — mesmo padding lateral + vertical que as demais seções */
+  .outros-inner {
+    padding: 5rem 1.5rem 5rem;
+    margin-top: 3rem;
+  }
+
+  /* Grids */
+  .serv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .outros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  footer {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Misc */
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-left .sobre-stat {
+    gap: 2rem;
+  }
+}

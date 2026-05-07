@@ -1,0 +1,50 @@
+/* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+
+    /* =============================================
+       DESIGN TOKENS
+    ============================================= */
+    :root {
+      --bg-light:    #f6f3ee;
+      --bg-medium:   #ece8df;
+      --bg-dark:     #131c17;
+      --bg-darker:   #0c1410;
+
+      --text-dark:   #18201c;
+      --text-mid:    #48524d;
+      --text-muted:  #7a8680;
+      --text-light:  #f6f3ee;
+
+      --green:       #2b6645;
+      --green-dark:  #1b4a30;
+      --green-light: #6daa8e;
+      --blue:        #187ddb;
+      --blue-dark:   #1240a8;
+      --gold:        #9a7c44;
+      --gold-light:  #c4a06a;
+
+      --border:      rgba(43,102,69,0.13);
+      --border-dk:   rgba(246,243,238,0.10);
+
+      --ff-display:  'Cormorant Garamond', Georgia, serif;
+      --ff-body:     'DM Sans', sans-serif;
+
+      --radius:      2px;
+      --shadow:      0 4px 28px rgba(18,28,22,0.09);
+      --shadow-lg:   0 12px 48px rgba(18,28,22,0.15);
+      --ease:        0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--bg-light);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }

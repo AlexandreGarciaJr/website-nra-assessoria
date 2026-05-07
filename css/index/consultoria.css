@@ -1,0 +1,94 @@
+/* =============================================
+       CONSULTORIA
+    ============================================= */
+    #consultoria {
+      padding: 9rem 3rem;
+      background: var(--bg-dark);
+    }
+    #consultoria .section-tag { color: var(--green-light); }
+    #consultoria .section-title { color: var(--text-light); }
+    #consultoria .section-subtitle { color: rgba(246,243,238,0.55); }
+
+    .consult-inner {
+      max-width: 1260px;
+      margin: 0 auto;
+    }
+    .consult-intro {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      font-size: 0.93rem;
+      line-height: 1.8;
+      color: rgba(246,243,238,0.6);
+      text-align: center;
+    }
+    .consult-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+    .consult-card {
+      background: rgba(246,243,238,0.03);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(246,243,238,0.08);
+      transition: background var(--ease), border-color var(--ease);
+    }
+    .consult-card:hover {
+      background: rgba(43,102,69,0.14);
+      border-color: var(--green-light);
+    }
+    .consult-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .consult-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: saturate(0.45) brightness(0.68);
+      transition: filter 0.65s ease, transform 0.65s ease;
+    }
+    .consult-card:hover .consult-img img {
+      filter: saturate(0.75) brightness(0.82);
+      transform: scale(1.05);
+    }
+    .consult-body {
+      padding: 2.2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid rgba(246,243,238,0.07);
+    }
+    .consult-body h3 {
+      font-family: var(--ff-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .consult-body p {
+      font-size: 0.84rem;
+      line-height: 1.75;
+      color: rgba(246,243,238,0.55);
+      flex: 1;
+    }
+    .consult-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.5rem;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      border-bottom: 1px solid rgba(109,170,142,0.3);
+      padding-bottom: 2px;
+      width: fit-content;
+      transition: gap var(--ease), border-color var(--ease);
+    }
+    .consult-card:hover .consult-more {
+      gap: 0.7rem;
+      border-color: var(--green-light);
+    }

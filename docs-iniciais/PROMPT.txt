@@ -1,0 +1,22 @@
+Este é o site de um novo cliente que quer criar um novo comigo.
+a empresa você pode ler do que se trata nos prints do site atual
+
+no inicio temos um video com um efeito parallax e em seguida uma foto de paisagem com efeito parallax.
+
+não temos efeito hover em nada praticamente apenas no menu.
+
+O que ele quer: um site novo, mantendo a mesma estrtura porém mais profissional. 
+
+No header podemos manter a mesma estrutura. porém quero um menu sanduiche na responsividade de mobile (mobile first)
+
+O efeito parallax pode se manter, você pode propor um vídeo para mim sem direitos autorais de fundo com parallax, depois se eu quiser eu só troco o vídeo. Pode propor algo novo na parte de "ASESSORIA EM RECURSOS NATURAIS" que nao seja uma segunda imagem com parallax.
+
+Nos serviços teremos os mesmos serviços que ja existem, porém com a adição destes novos serviços: As atividades que precisam ser adicionadas são Estudos de Impacto Ambiental - Meio Biótico e Meio Abiótico, Assessoria Regulatória junto ao Ministério da Agricultura para Sementes e Insumos Agrícolas, Assessoria Regulatória Ambiental nos níveis Federal, Estadual e Municipal (aqui são os trabalhos de licenciamento ambiental, licenças pra supressão de vegetação ou árvores isoladas, etc). Mantenha os grids com fotos de referência do respectivo serviço e crie fotos novas para os serviços novos. Pode mudar o layoput dos grids da maneira que achar melhor e mais profissional.
+
+A parte de consultoria mantemos os mesmos itens. Pode mudar o layoput dos grids da maneira que achar melhor e mais profissional.
+
+Quero que o contato seja diferente. Não quero o contato no fundo da página, quero uma página de contato separada com um formulário renovado. Pode mudar os itens do formulário para o que achar melhor de acordo com os serviços da empresa, e adicionar informaçoes que achar mais profissional e necessarias
+
+Entao logo apos de consultoria ja teremos o footer, pode repaginar o footer de acordo com o que achar melhor, e criar um ul li do menu no footer.
+
+Cores do site: ele gosta de minimalismo, nada chamativo, porém acha esse site dele muito morto, e quer mais "vida". Pode repaginar as cores de acordo com o tema da empresa, de maneira que fique profissional e elegante.

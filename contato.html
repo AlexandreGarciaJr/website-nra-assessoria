@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NRA Assessoria | Geologia, hidrogeologia, Geofísica & meio ambiente</title>
+  <meta name="description" content="A NRA Assessoria em Recursos Naturais é uma empresa de prestação de serviços técnicos e consultoria especializados na busca e gerenciamento de matérias primas minerais, incluindo a água. Nosso objetivo visa a otimização e o aproveitamento racional dos recursos naturais, minimizando custos e impactos negativos na relação entre seres humanos e natureza.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+    rel="stylesheet">
+  <style>
+    /* =============================================
+       RESET & TOKENS (mesmos do index.html)
+    ============================================= */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    :root {
+      --bg-light: #f6f3ee;
+      --bg-medium: #ece8df;
+      --bg-dark: #131c17;
+      --bg-darker: #0c1410;
+
+      --text-dark: #18201c;
+      --text-mid: #48524d;
+      --text-muted: #7a8680;
+      --text-light: #f6f3ee;
+
+      --green: #2b6645;
+      --green-dark: #1b4a30;
+      --green-light: #6daa8e;
+      --gold: #9a7c44;
+      --blue: #1a56db;
+      --blue-dark: #1240a8;
+
+      --border: rgba(43, 102, 69, 0.13);
+      --border-dk: rgba(246, 243, 238, 0.10);
+
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-body: 'DM Sans', sans-serif;
+
+      --shadow: 0 4px 28px rgba(18, 28, 22, 0.09);
+      --shadow-lg: 0 12px 48px rgba(18, 28, 22, 0.15);
+      --ease: 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--bg-medium);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* =============================================
+       HEADER
+    ============================================= */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      z-index: 1000;
+      background: rgba(10, 18, 13, 0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(246, 243, 238, 0.06);
+      transition: background var(--ease), border-color var(--ease), backdrop-filter var(--ease);
+    }
+
+    #header.solid {
+      background: rgba(246, 243, 238, 0.97);
+      backdrop-filter: blur(18px);
+      border-color: var(--border);
+    }
+
+    .logoimagem {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 2.8rem;
+    }
+
+    .desktop-nav a {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(246, 243, 238, 0.85);
+      position: relative;
+      transition: color var(--ease);
+    }
+
+    #header.solid .desktop-nav a {
+      color: var(--text-mid);
+    }
+
+    .desktop-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background: var(--green-light);
+      transition: width var(--ease);
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: var(--green-light);
+    }
+
+    .desktop-nav a:hover::after,
+    .desktop-nav a.active::after {
+      width: 100%;
+    }
+
+    /* CTA link in nav */
+    .nav-cta {
+      font-size: 0.72rem !important;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--blue);
+      color: white !important;
+      border: 1px solid var(--blue);
+      padding: 0.5rem 1.2rem;
+      transition: background var(--ease), color var(--ease) !important;
+    }
+
+    .nav-cta::after {
+      display: none !important;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 2px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background: rgba(246, 243, 238, 0.85);
+      transition: all var(--ease);
+      transform-origin: center;
+    }
+
+    #header.solid .hamburger span {
+      background: var(--text-dark);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    /* Mobile nav */
+    /* Overlay escuro atrás do drawer */
+    #nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 998;
+    }
+
+    #nav-overlay.open {
+      display: block;
+    }
+
+    #mobile-nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100vh;
+      background: var(--bg-darker);
+      padding: 5rem 2.5rem 3rem;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transform: translateX(110%);
+      transition: transform var(--ease);
+      border-left: 1px solid var(--border-dk);
+      box-shadow: -8px 0 40px rgba(0, 0, 0, 0.35);
+    }
+
+    #mobile-nav.open {
+      transform: translateX(0);
+    }
+
+    #mobile-nav a {
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(246, 243, 238, 0.75);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-dk);
+      transition: color var(--ease);
+    }
+
+    #mobile-nav a:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    #mobile-nav a:hover {
+      color: var(--green-light);
+    }
+
+    .nav-close {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.8rem;
+      background: none;
+      border: none;
+      color: rgba(246, 243, 238, 0.45);
+      cursor: pointer;
+      font-size: 1.5rem;
+      line-height: 1;
+      transition: color var(--ease);
+    }
+
+    .nav-close:hover {
+      color: var(--green-light);
+    }
+
+    
+    .contact-hero {
+      padding-top: 68px;
+      background: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero-inner {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 7rem 3rem 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: end;
+    }
+    .contact-hero-text .label {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 1.5rem;
+    }
+    .contact-hero-text h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    .contact-hero-text h1 em {
+      font-style: italic;
+      color: var(--green-light);
+    }
+    .contact-hero-text p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(246,243,238,0.58);
+      max-width: 440px;
+    }
+
+    /* Info cards in hero */
+    .contact-info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border-dk);
+    }
+
+    .info-card {
+      display: flex;
+      gap: 1.4rem;
+      align-items: flex-start;
+      padding: 1.8rem 2rem;
+      border-bottom: 1px solid var(--border-dk);
+      transition: background var(--ease);
+    }
+
+    .info-card:last-child {
+      border-bottom: none;
+    }
+
+    .info-card:hover {
+      background: rgba(43, 102, 69, 0.12);
+    }
+
+    .info-card-icon {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      background: rgba(43, 102, 69, 0.2);
+      border: 1px solid rgba(43, 102, 69, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-light);
+      margin-top: 2px;
+    }
+
+    .info-card-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 1.4;
+    }
+
+    .info-card-body strong {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(246, 243, 238, 0.38);
+      margin-bottom: 0.4rem;
+    }
+
+    .info-card-body span {
+      font-size: 0.9rem;
+      color: rgba(246, 243, 238, 0.78);
+      line-height: 1.5;
+    }
+
+    .info-card-body a {
+      font-size: 0.9rem;
+      color: rgba(246, 243, 238, 0.78);
+      transition: color var(--ease);
+    }
+
+    .info-card-body a:hover {
+      color: var(--green-light);
+    }
+
+    /* Decorative line in hero */
+    .contact-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(109, 170, 142, 0.3), transparent);
+    }
+
+    /* =============================================
+       CONTACT SECTION (info esquerda + form direita)
+    ============================================= */
+    .form-section {
+      min-height: 100vh;
+      padding: calc(68px + 5rem) 3rem 6rem;
+      background:
+        radial-gradient(ellipse 60% 70% at 0% 50%, rgba(43, 102, 69, 0.07) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 50% at 100% 20%, rgba(26, 86, 219, 0.04) 0%, transparent 60%),
+        var(--bg-medium);
+    }
+
+    .contact-wrap {
+      max-width: 1260px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    /* LEFT */
+    .contact-left .label {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+
+    .contact-heading {
+      font-family: var(--ff-display);
+      font-size: clamp(2.2rem, 3.8vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--text-dark);
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-heading em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .contact-subtext {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-details {
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-detail {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-detail:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    .sidebar-detail-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: rgba(43, 102, 69, 0.09);
+      border: 1px solid rgba(43, 102, 69, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      margin-top: 1px;
+    }
+
+    .sidebar-detail-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke-width: 1.4;
+    }
+
+    .sidebar-detail-body strong {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .sidebar-detail-body span,
+    .sidebar-detail-body a {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+
+    .sidebar-detail-body a:hover {
+      color: var(--green);
+    }
+
+    .sidebar-coverage {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: rgba(43, 102, 69, 0.07);
+      border: 1px solid rgba(43, 102, 69, 0.15);
+      border-left: 2px solid var(--green);
+    }
+
+    .sidebar-coverage h4 {
+      font-family: var(--ff-display);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--green);
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar-coverage p {
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--text-mid);
+      margin: 0;
+    }
+
+    /* Form */
+    .contact-form {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--green);
+      padding: 3.5rem;
+    }
+
+    .form-title {
+      font-family: var(--ff-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .form-group label .req {
+      color: var(--green);
+      margin-left: 2px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      background: var(--bg-medium);
+      border: 1px solid rgba(43, 102, 69, 0.15);
+      border-radius: 0;
+      font-family: var(--ff-body);
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color var(--ease), box-shadow var(--ease);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(43, 102, 69, 0.08);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+      line-height: 1.65;
+    }
+
+    /* Custom select arrow */
+    .select-wrap {
+      position: relative;
+    }
+
+    .select-wrap::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 1.1rem;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid var(--text-muted);
+      pointer-events: none;
+    }
+
+    .select-wrap select {
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    /* Checkbox group */
+    .check-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      font-size: 0.83rem;
+      color: var(--text-mid);
+      user-select: none;
+    }
+
+    .check-item input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      accent-color: var(--green);
+      cursor: pointer;
+      padding: 0;
+      border: 1px solid var(--border);
+    }
+
+    /* Privacy note */
+    .form-privacy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: rgba(43, 102, 69, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    /* Submit */
+    .form-submit {
+      width: 100%;
+      padding: 1.15rem;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      font-family: var(--ff-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--ease);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .form-submit:hover {
+      background: var(--green-dark);
+    }
+
+    .form-submit svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Success / Error messages */
+    .form-msg {
+      display: none;
+      padding: 1rem 1.2rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .form-msg.success {
+      display: block;
+      background: rgba(43, 102, 69, 0.1);
+      border: 1px solid rgba(43, 102, 69, 0.3);
+      color: var(--green-dark);
+    }
+
+    .form-msg.error {
+      display: block;
+      background: rgba(180, 60, 60, 0.08);
+      border: 1px solid rgba(180, 60, 60, 0.25);
+      color: #8b2222;
+    }
+
+    /* =============================================
+       MAP / AREA COVERAGE STRIP
+    ============================================= */
+    .coverage-strip {
+      padding: 5rem 3rem;
+      background: var(--bg-dark);
+      text-align: center;
+    }
+
+    .coverage-strip .label {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 1rem;
+    }
+
+    .coverage-strip h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+    }
+
+    .coverage-strip p {
+      font-size: 0.9rem;
+      color: rgba(246, 243, 238, 0.5);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* =============================================
+       FOOTER (idêntico ao index.html)
+    ============================================= */
+    footer {
+      background: var(--bg-darker);
+      padding: 6rem 3rem 2.5rem;
+    }
+
+    .footer-inner {
+      max-width: 1260px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+      gap: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border-dk);
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .logo {
+      display: block;
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.84rem;
+      line-height: 1.75;
+      color: rgba(246, 243, 238, 0.42);
+      max-width: 260px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(246, 243, 238, 0.35);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.84rem;
+      color: rgba(246, 243, 238, 0.58);
+      transition: color var(--ease);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--green-light);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      font-size: 0.84rem;
+      color: rgba(246, 243, 238, 0.58);
+      line-height: 1.5;
+    }
+
+    .footer-contact-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--green-light);
+      opacity: 0.7;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-size: 0.73rem;
+      color: rgba(246, 243, 238, 0.25);
+    }
+
+    .footer-bottom a {
+      font-size: 0.73rem;
+      color: var(--green-light);
+      opacity: 0.6;
+      transition: opacity var(--ease);
+    }
+
+    .footer-bottom a:hover {
+      opacity: 1;
+    }
+
+    /* =============================================
+       ANIMATIONS & REVEAL
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 1100px) {
+      .contact-wrap {
+        gap: 4rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #header {
+        padding: 0 1.5rem;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .form-section,
+      .coverage-strip,
+      footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .check-group {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <a href="index.html" class="logo"><img class="logoimagem" src="./assets/img/logo.png" alt="Logo NRA"></a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#sobre">A Empresa</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#consultoria">Consultoria</a>
+      <a href="contato.html" class="nav-cta active">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav id="mobile-nav">
+    <button class="nav-close" id="nav-close" aria-label="Fechar menu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="index.html#sobre">A Empresa</a>
+    <a href="index.html#servicos">Serviços</a>
+    <a href="index.html#consultoria">Consultoria</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <div id="nav-overlay"></div>
+
+  <!-- ============ CONTATO PRINCIPAL ============ -->
+  <section class="form-section">
+    <div class="contact-wrap">
+
+      <!-- LEFT: info de contato -->
+      <aside class="contact-left reveal">
+        <span class="label">Contato</span>
+        <h2 class="contact-heading">Entre em<br><em>contato</em></h2>
+        <p class="contact-subtext">Estamos prontos para analisar sua necessidade e propor a melhor solução técnica.
+          Respondemos em até 48 horas úteis.</p>
+
+        <div class="contact-details">
+          <div class="sidebar-detail">
+            <div class="sidebar-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.36-.36a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+            </div>
+            <div class="sidebar-detail-body">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5511993046720">+55 11 99304 672</a>
+            </div>
+          </div>
+          <div class="sidebar-detail">
+            <div class="sidebar-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div class="sidebar-detail-body">
+              <strong>E-mail</strong>
+              <a href="mailto:contato@nraassessoria.com">contato@nraassessoria.com</a>
+            </div>
+          </div>
+          <div class="sidebar-detail">
+            <div class="sidebar-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div class="sidebar-detail-body">
+              <strong>Localização</strong>
+              <span>São Paulo – Perdizes, SP</span>
+            </div>
+          </div>
+          <div class="sidebar-detail">
+            <div class="sidebar-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div class="sidebar-detail-body">
+              <strong>Horário de Atendimento</strong>
+              <span>Seg – Sex, 08h às 18h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-coverage">
+          <h4>Área de Atuação</h4>
+          <p>Atuamos em toda a América do Sul, com equipes mobilizáveis para qualquer estado brasileiro e países
+            vizinhos.</p>
+        </div>
+      </aside>
+
+      <!-- RIGHT: formulário -->
+      <div class="contact-form reveal" style="transition-delay:0.15s">
+        <h2 class="form-title">Solicitação de Contato</h2>
+        <p class="form-subtitle">Campos marcados com <span style="color:var(--green)">*</span> são obrigatórios</p>
+
+        <form id="contact-form" action="enviar.php" method="POST" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome Completo <span class="req">*</span></label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa / Organização</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-mail <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp <span class="req">*</span></label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="servico">Área de Interesse <span class="req">*</span></label>
+            <div class="select-wrap">
+              <select id="servico" name="servico" required>
+                <option value="" disabled selected>Selecione a área de interesse</option>
+                <optgroup label="Serviços">
+                  <option value="geologia">Geologia</option>
+                  <option value="geologia-engenharia">Geologia de Engenharia</option>
+                  <option value="hidrogeologia">Hidrogeologia &amp; Recursos Hídricos</option>
+                  <option value="geofisica">Geofísica Aplicada</option>
+                  <option value="eia">Estudos de Impacto Ambiental (EIA/RIMA)</option>
+                  <option value="reg-agricola">Assessoria Regulatória Agrícola (MAPA)</option>
+                  <option value="reg-ambiental">Assessoria Regulatória Ambiental</option>
+                </optgroup>
+                <optgroup label="Consultoria">
+                  <option value="auditoria">Auditoria Técnica</option>
+                  <option value="assistencia">Assistência Técnica / Laudos e Pareceres</option>
+                  <option value="pd">Pesquisa &amp; Desenvolvimento</option>
+                </optgroup>
+                <option value="outro">Outro / Não sei ainda</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="estado">Estado / UF do Projeto</label>
+              <div class="select-wrap">
+                <select id="estado" name="estado">
+                  <option value="" disabled selected>Selecione o estado</option>
+                  <option>AC</option>
+                  <option>AL</option>
+                  <option>AP</option>
+                  <option>AM</option>
+                  <option>BA</option>
+                  <option>CE</option>
+                  <option>DF</option>
+                  <option>ES</option>
+                  <option>GO</option>
+                  <option>MA</option>
+                  <option>MT</option>
+                  <option>MS</option>
+                  <option>MG</option>
+                  <option>PA</option>
+                  <option>PB</option>
+                  <option>PR</option>
+                  <option>PE</option>
+                  <option>PI</option>
+                  <option>RJ</option>
+                  <option>RN</option>
+                  <option>RS</option>
+                  <option>RO</option>
+                  <option>RR</option>
+                  <option>SC</option>
+                  <option selected>SP</option>
+                  <option>SE</option>
+                  <option>TO</option>
+                  <option>Exterior / América do Sul</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="municipio">Município do Projeto</label>
+              <input type="text" id="municipio" name="municipio" placeholder="Cidade ou região">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Descrição do Projeto <span class="req">*</span></label>
+            <textarea id="mensagem" name="mensagem"
+              placeholder="Descreva o projeto, localização, prazo desejado e qualquer informação relevante..."
+              required></textarea>
+          </div>
+
+          <p class="form-privacy">
+            As informações fornecidas são utilizadas exclusivamente para análise e retorno sobre a sua solicitação. Não
+            compartilhamos seus dados com terceiros.
+          </p>
+
+          <button type="submit" class="form-submit">
+            Enviar Solicitação
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+
+          <div class="form-msg" id="form-success">
+            ✓ Mensagem enviada com sucesso! Nossa equipe irá analisar sua solicitação e retornará em até 48 horas úteis.
+          </div>
+          <div class="form-msg" id="form-error">
+            Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato pelo WhatsApp.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo"><img class="logoimagem" src="./assets/img/logo.png" alt="Logo NRA"></a>
+          <p>Assessoria em Recursos Naturais — soluções técnicas especializadas para o aproveitamento racional dos
+            recursos naturais em toda a América do Sul.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#sobre">A Empresa</a></li>
+            <li><a href="index.html#servicos">Serviços</a></li>
+            <li><a href="index.html#consultoria">Consultoria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="index.html#servicos">Geologia</a></li>
+            <li><a href="index.html#servicos">Geologia de Engenharia</a></li>
+            <li><a href="index.html#servicos">Hidrogeologia</a></li>
+            <li><a href="index.html#servicos">Geofísica Aplicada</a></li>
+            <li><a href="index.html#servicos">Estudos de Impacto Ambiental</a></li>
+            <li><a href="index.html#servicos">Assessoria Regulatória</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.36-.36a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            +55 11 99304 672
+          </div>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            contato@nraassessoria.com
+          </div>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            São Paulo – SP, Brasil
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NRA – Assessoria em Recursos Naturais. Todos os direitos reservados.</p>
+        <a href="index.html">← Voltar ao site</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    // --- Header scroll solid state ---
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('solid', window.scrollY > 60);
+    }, { passive: true });
+
+    // --- Hamburger / mobile nav ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    const navOverlay = document.getElementById('nav-overlay');
+    const navClose = document.getElementById('nav-close');
+
+    function openNav() {
+      hamburger.classList.add('open');
+      mobileNav.classList.add('open');
+      navOverlay.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      navOverlay.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeNav() : openNav());
+    navClose.addEventListener('click', closeNav);
+    navOverlay.addEventListener('click', closeNav);
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+    // --- Reveal on scroll ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => io.observe(el));
+
+    // --- Phone mask ---
+    const telInput = document.getElementById('telefone');
+    telInput.addEventListener('input', e => {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length <= 10) v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+      else v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+      e.target.value = v;
+    });
+
+    // --- Pre-fill dropdown from URL param ---
+    const params = new URLSearchParams(window.location.search);
+    const srv = params.get('servico');
+    if (srv) {
+      const sel = document.getElementById('servico');
+      for (let opt of sel.options) { if (opt.value === srv) { sel.value = srv; break; } }
+    }
+
+    // --- Form submission ---
+    const form = document.getElementById('contact-form');
+    const msgOk = document.getElementById('form-success');
+    const msgErr = document.getElementById('form-error');
+    const submitBtn = form.querySelector('.form-submit');
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      msgOk.style.display = 'none';
+      msgErr.style.display = 'none';
+
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(f => {
+        f.style.borderColor = '';
+        if (!f.value.trim()) { f.style.borderColor = '#c0392b'; valid = false; }
+      });
+      if (!valid) {
+        msgErr.textContent = 'Por favor, preencha todos os campos obrigatórios.';
+        msgErr.style.display = 'block';
+        return;
+      }
+
+      submitBtn.textContent = 'Enviando…';
+      submitBtn.disabled = true;
+
+      try {
+        const data = new FormData(form);
+        const resp = await fetch('enviar.php', { method: 'POST', body: data });
+        const json = await resp.json();
+        if (json.status === 'ok') { msgOk.style.display = 'block'; form.reset(); }
+        else throw new Error(json.message || 'Erro');
+      } catch {
+        msgErr.textContent = 'Ocorreu um erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.';
+        msgErr.style.display = 'block';
+      } finally {
+        submitBtn.innerHTML = 'Enviar Solicitação <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>';
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

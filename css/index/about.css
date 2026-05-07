@@ -1,0 +1,100 @@
+    
+    /* =============================================
+       ABOUT (Pilares — replaces second parallax)
+    ============================================= */
+    #sobre {
+      padding: 9rem 3rem;
+      background: var(--bg-light);
+    }
+    .sobre-inner {
+      max-width: 1260px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7rem;
+      align-items: center;
+    }
+    .sobre-left .section-tag { color: var(--green); }
+    .sobre-left .section-title { margin-bottom: 1.6rem; }
+    .sobre-left .section-title em { color: var(--green); font-style: italic; }
+    .sobre-left p {
+      font-size: 0.93rem;
+      line-height: 1.85;
+      color: var(--text-mid);
+      max-width: 460px;
+    }
+    .sobre-left .divider {
+      width: 48px; height: 1px;
+      background: linear-gradient(90deg, var(--green), var(--blue));
+      margin: 2rem 0;
+    }
+    .sobre-left .sobre-stat {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+    .stat-num {
+      font-family: var(--ff-display);
+      font-size: 2.6rem;
+      font-weight: 400;
+      color: var(--green);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .pilares {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .pilar {
+      display: flex;
+      gap: 1.8rem;
+      align-items: flex-start;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      transition: box-shadow var(--ease), border-color var(--ease), background var(--ease);
+      background: var(--bg-light);
+    }
+    .pilar:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--green);
+      background: rgba(43,102,69,0.04);
+      z-index: 1;
+      position: relative;
+    }
+    .pilar-icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      margin-top: 2px;
+      transition: background var(--ease), color var(--ease), outline var(--ease);
+    }
+    .pilar:hover .pilar-icon {
+      background: #fff;
+      color: var(--green);
+      outline: 2px solid var(--green);
+    }
+    .pilar-icon svg { width: 20px; height: 20px; stroke-width: 1.4; }
+    .pilar-body h3 {
+      font-family: var(--ff-display);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+    .pilar-body p {
+      font-size: 0.84rem;
+      line-height: 1.7;
+      color: var(--text-mid);
+    }

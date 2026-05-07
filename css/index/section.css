@@ -1,0 +1,40 @@
+ /* =============================================
+       SECTION UTILITIES
+    ============================================= */
+    .section-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text-dark);
+    }
+    .section-subtitle {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 5rem;
+    }
+    .section-header .section-title { margin-bottom: 1.2rem; }
+
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(80px) scale(0.98);
+      transition: opacity 2s cubic-bezier(0.22,1,0.36,1), transform 2s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.in {
+        opacity: 1; transform: translateY(0) scale(1);
+    }
