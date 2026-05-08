@@ -116,8 +116,17 @@
   <!-- ============ HERO ============ -->
   <section id="home">
     <div class="hero-media" id="heroMedia">
-      <video id="hero-video" autoplay muted playsinline loop preload="auto">
-      </video>
+      <video id="hero-video" autoplay muted loop playsinline webkit-playsinline>
+  <!-- Mobile: versão comprimida (abaixo de 15MB, 720p) -->
+  <source media="(max-width: 768px)"
+          src="./assets/mp4/hero-mobile.mp4"
+          type="video/mp4">
+  <!-- Desktop: versão full-hd -->
+  <source src="./assets/mp4/mixkit-natural-landscape-in-an-aerial-view-around-a-forest-41378-full-hd.mp4"
+          type="video/mp4">
+  <source src="./assets/mp4/mixkit-forest-in-the-mountains-aerial-view-1764-full-hd.mp4"
+          type="video/mp4">
+</video>
       <!-- Fallback visual caso o browser bloqueie autoplay -->
       <div class="hero-fallback"></div>
     </div>
