@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NRA Assessoria | Geologia, hidrogeologia, Geofísica & meio ambiente</title>
-  <meta name="description" content="A NRA Assessoria em Recursos Naturais é uma empresa de prestação de serviços técnicos e consultoria especializados na busca e gerenciamento de matérias primas minerais, incluindo a água. Nosso objetivo visa a otimização e o aproveitamento racional dos recursos naturais, minimizando custos e impactos negativos na relação entre seres humanos e natureza.">
+  <meta name="description"
+    content="A NRA Assessoria em Recursos Naturais é uma empresa de prestação de serviços técnicos e consultoria especializados na busca e gerenciamento de matérias primas minerais, incluindo a água. Nosso objetivo visa a otimização e o aproveitamento racional dos recursos naturais, minimizando custos e impactos negativos na relação entre seres humanos e natureza.">
 
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png">
 
@@ -15,6 +16,8 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+
+  <meta name="format-detection" content="telephone=no">
 
   <script type="module" src="./scripts/index/loader.js"></script>
   <script type="module" src="./scripts/index/header.js"></script>
@@ -28,52 +31,61 @@
 
   <!-- ============ LOADER ============ -->
   <div id="loader">
-  <div class="loader-wrap">
-    <svg class="loader-svg" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <clipPath id="clip-mt">
-          <path d="M0,155 L72,82 L160,28 L248,88 L320,112 L320,180 L0,180 Z"/>
-        </clipPath>
-      </defs>
-      <g clip-path="url(#clip-mt)">
-        <rect x="0" y="180" width="320" height="0" fill="rgba(13,24,16,0.95)">
-          <animate attributeName="y"      from="180" to="150" dur="0.38s" begin="0.25s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-          <animate attributeName="height" from="0"   to="30"  dur="0.38s" begin="0.25s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-        </rect>
-        <rect x="0" y="180" width="320" height="0" fill="rgba(21,56,38,0.9)">
-          <animate attributeName="y"      from="180" to="120" dur="0.38s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-          <animate attributeName="height" from="0"   to="30"  dur="0.38s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-        </rect>
-        <rect x="0" y="180" width="320" height="0" fill="rgba(43,102,69,0.82)">
-          <animate attributeName="y"      from="180" to="90"  dur="0.38s" begin="0.75s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-          <animate attributeName="height" from="0"   to="30"  dur="0.38s" begin="0.75s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-        </rect>
-        <rect x="0" y="180" width="320" height="0" fill="rgba(62,128,88,0.65)">
-          <animate attributeName="y"      from="180" to="60"  dur="0.38s" begin="1.0s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-          <animate attributeName="height" from="0"   to="30"  dur="0.38s" begin="1.0s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-        </rect>
-        <rect x="0" y="180" width="320" height="0" fill="rgba(109,170,142,0.38)">
-          <animate attributeName="y"      from="180" to="28"  dur="0.38s" begin="1.25s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-          <animate attributeName="height" from="0"   to="32"  dur="0.38s" begin="1.25s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-        </rect>
-        <line x1="0" y1="150" x2="320" y2="150" stroke="rgba(246,243,238,0.06)" stroke-width="1"/>
-        <line x1="0" y1="120" x2="320" y2="120" stroke="rgba(246,243,238,0.06)" stroke-width="1"/>
-        <line x1="0" y1="90"  x2="320" y2="90"  stroke="rgba(246,243,238,0.06)" stroke-width="1"/>
-        <line x1="0" y1="60"  x2="320" y2="60"  stroke="rgba(246,243,238,0.06)" stroke-width="1"/>
-      </g>
-      <path class="mt-line"
-            d="M0,155 L72,82 L160,28 L248,88 L320,112"
-            fill="none" stroke="#6daa8e" stroke-width="1.8"
-            stroke-linecap="round" stroke-linejoin="round"/>
-      <line class="ground-line"
-            x1="0" y1="158" x2="320" y2="158"
-            stroke="rgba(43,102,69,0.35)" stroke-width="0.8"/>
-    </svg>
-    <div"><img class="loader-logo" src="./assets/img/logo.png" alt="Logo NRA"></div>
+    <div class="loader-wrap">
+      <svg class="loader-svg" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <clipPath id="clip-mt">
+            <path d="M0,155 L72,82 L160,28 L248,88 L320,112 L320,180 L0,180 Z" />
+          </clipPath>
+        </defs>
+        <g clip-path="url(#clip-mt)">
+          <rect x="0" y="180" width="320" height="0" fill="rgba(13,24,16,0.95)">
+            <animate attributeName="y" from="180" to="150" dur="0.38s" begin="0.25s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+            <animate attributeName="height" from="0" to="30" dur="0.38s" begin="0.25s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+          </rect>
+          <rect x="0" y="180" width="320" height="0" fill="rgba(21,56,38,0.9)">
+            <animate attributeName="y" from="180" to="120" dur="0.38s" begin="0.5s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+            <animate attributeName="height" from="0" to="30" dur="0.38s" begin="0.5s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+          </rect>
+          <rect x="0" y="180" width="320" height="0" fill="rgba(43,102,69,0.82)">
+            <animate attributeName="y" from="180" to="90" dur="0.38s" begin="0.75s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+            <animate attributeName="height" from="0" to="30" dur="0.38s" begin="0.75s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+          </rect>
+          <rect x="0" y="180" width="320" height="0" fill="rgba(62,128,88,0.65)">
+            <animate attributeName="y" from="180" to="60" dur="0.38s" begin="1.0s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+            <animate attributeName="height" from="0" to="30" dur="0.38s" begin="1.0s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+          </rect>
+          <rect x="0" y="180" width="320" height="0" fill="rgba(109,170,142,0.38)">
+            <animate attributeName="y" from="180" to="28" dur="0.38s" begin="1.25s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+            <animate attributeName="height" from="0" to="32" dur="0.38s" begin="1.25s" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.2 1" />
+          </rect>
+          <line x1="0" y1="150" x2="320" y2="150" stroke="rgba(246,243,238,0.06)" stroke-width="1" />
+          <line x1="0" y1="120" x2="320" y2="120" stroke="rgba(246,243,238,0.06)" stroke-width="1" />
+          <line x1="0" y1="90" x2="320" y2="90" stroke="rgba(246,243,238,0.06)" stroke-width="1" />
+          <line x1="0" y1="60" x2="320" y2="60" stroke="rgba(246,243,238,0.06)" stroke-width="1" />
+        </g>
+        <path class="mt-line" d="M0,155 L72,82 L160,28 L248,88 L320,112" fill="none" stroke="#6daa8e" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round" />
+        <line class="ground-line" x1="0" y1="158" x2="320" y2="158" stroke="rgba(43,102,69,0.35)" stroke-width="0.8" />
+      </svg>
+      <div"><img class="loader-logo" src="./assets/img/logo.png" alt="Logo NRA">
+    </div>
     <div class="loader-brand">Assessoria em Recursos Naturais</div>
-    <div class="loader-bar"><div class="loader-progress"></div></div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
   </div>
-</div>
+  </div>
 
   <!-- ============ HEADER ============ -->
   <header id="header">
@@ -103,10 +115,9 @@
   <!-- ============ HERO ============ -->
   <section id="home">
     <div class="hero-media" id="heroMedia">
-      <video autoplay muted loop playsinline>
-        <!-- 1ª opção -->
-        <source src="./assets/mp4/mixkit-natural-landscape-in-an-aerial-view-around-a-forest-41378-full-hd.mp4" type="video/mp4">
-        <!-- 2ª opção -->
+      <video id="hero-video" autoplay muted loop playsinline webkit-playsinline>
+        <source src="./assets/mp4/mixkit-natural-landscape-in-an-aerial-view-around-a-forest-41378-full-hd.mp4"
+          type="video/mp4">
         <source src="./assets/mp4/mixkit-forest-in-the-mountains-aerial-view-1764-full-hd.mp4" type="video/mp4">
       </video>
       <!-- Fallback visual caso o browser bloqueie autoplay -->
@@ -211,8 +222,7 @@
       <div class="apres-grid">
         <div class="apres-img-wrap reveal">
           <div class="apres-img">
-            <img src="./assets/img/apresentacao.jpg"
-              alt="Trabalho de campo NRA" loading="lazy">
+            <img src="./assets/img/apresentacao.jpg" alt="Trabalho de campo NRA" loading="lazy">
           </div>
           <div class="apres-img-caption">
             <strong>+10</strong>
@@ -245,8 +255,7 @@
         <div class="serv-card">
           <div class="serv-img">
             <span class="serv-num">01</span>
-            <img src="./assets/img/geologia.jpg"
-              alt="Geologia" loading="lazy">
+            <img src="./assets/img/geologia.jpg" alt="Geologia" loading="lazy">
           </div>
           <div class="serv-body">
             <h3>Geologia</h3>
@@ -262,8 +271,7 @@
         <div class="serv-card">
           <div class="serv-img">
             <span class="serv-num">02</span>
-            <img src="./assets/img/geo-engenharia.jpg"
-              alt="Geologia de Engenharia" loading="lazy">
+            <img src="./assets/img/geo-engenharia.jpg" alt="Geologia de Engenharia" loading="lazy">
           </div>
           <div class="serv-body">
             <h3>Geologia de Engenharia</h3>
@@ -280,8 +288,7 @@
         <div class="serv-card">
           <div class="serv-img">
             <span class="serv-num">03</span>
-            <img src="./assets/img/hidrogeologia.jpg"
-              alt="Hidrogeologia" loading="lazy">
+            <img src="./assets/img/hidrogeologia.jpg" alt="Hidrogeologia" loading="lazy">
           </div>
           <div class="serv-body">
             <h3>Hidrogeologia & Recursos Hídricos</h3>
@@ -297,8 +304,7 @@
         <div class="serv-card">
           <div class="serv-img">
             <span class="serv-num">04</span>
-            <img src="./assets/img/geofisica.jpg"
-              alt="Geofísica Aplicada" loading="lazy">
+            <img src="./assets/img/geofisica.jpg" alt="Geofísica Aplicada" loading="lazy">
           </div>
           <div class="serv-body">
             <h3>Geofísica Aplicada</h3>
@@ -324,8 +330,7 @@
         <!-- Licenciamento Ambiental -->
         <div class="outro-card">
           <div class="outro-img">
-            <img src="./assets/img/outros/licenciamento-ambiental.jpeg"
-              alt="Licenciamento Ambiental" loading="lazy">
+            <img src="./assets/img/outros/licenciamento-ambiental.jpeg" alt="Licenciamento Ambiental" loading="lazy">
             <div class="outro-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
                 <path
@@ -348,8 +353,7 @@
         <!-- Manejo Arbóreo -->
         <div class="outro-card">
           <div class="outro-img">
-            <img src="./assets/img/outros/manejo-arbóreo.jpeg"
-              alt="Manejo Arbóreo" loading="lazy">
+            <img src="./assets/img/outros/manejo-arbóreo.jpeg" alt="Manejo Arbóreo" loading="lazy">
             <div class="outro-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
                 <path
@@ -366,8 +370,7 @@
         <!-- Fauna -->
         <div class="outro-card">
           <div class="outro-img">
-            <img src="./assets/img/outros/estudos-fauna.jpeg"
-              alt="Monitoramento de Fauna" loading="lazy">
+            <img src="./assets/img/outros/estudos-fauna.jpeg" alt="Monitoramento de Fauna" loading="lazy">
             <div class="outro-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
                 <circle cx="11" cy="4" r="2" />
@@ -388,8 +391,7 @@
         <!-- Sementes e Insumos -->
         <div class="outro-card">
           <div class="outro-img">
-            <img src="./assets/img/outros/agricultura.jpeg"
-              alt="Adequação Regulatória Agrícola" loading="lazy">
+            <img src="./assets/img/outros/agricultura.jpeg" alt="Adequação Regulatória Agrícola" loading="lazy">
             <div class="outro-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
                 <path
@@ -429,8 +431,7 @@
         <!-- Auditoria -->
         <div class="consult-card">
           <div class="consult-img">
-            <img src="./assets/img/consultoria/auditoria.jpg"
-              alt="Auditoria" loading="lazy">
+            <img src="./assets/img/consultoria/auditoria.jpg" alt="Auditoria" loading="lazy">
           </div>
           <div class="consult-body">
             <h3>Auditoria Técnica</h3>
@@ -447,8 +448,7 @@
         <!-- Assistência Técnica -->
         <div class="consult-card">
           <div class="consult-img">
-            <img src="./assets/img/consultoria/assistencia.jpg"
-              alt="Assistência Técnica" loading="lazy">
+            <img src="./assets/img/consultoria/assistencia.jpg" alt="Assistência Técnica" loading="lazy">
           </div>
           <div class="consult-body">
             <h3>Assistência Técnica</h3>
@@ -465,8 +465,7 @@
         <!-- P&D -->
         <div class="consult-card">
           <div class="consult-img">
-            <img src="./assets/img/consultoria/pesquisa.jpg"
-              alt="Pesquisa e Desenvolvimento" loading="lazy">
+            <img src="./assets/img/consultoria/pesquisa.jpg" alt="Pesquisa e Desenvolvimento" loading="lazy">
           </div>
           <div class="consult-body">
             <h3>Pesquisa & Desenvolvimento</h3>
