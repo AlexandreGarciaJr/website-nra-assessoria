@@ -33,10 +33,7 @@ if (isIOS) {
   heroVideo.style.display = 'none';
   heroFallback.style.zIndex = '1';
 } else {
-  const playlist = isMobile ? [
-    './assets/mp4/Mixkit-Natural-Landscape-para-mobile.mp4',
-    './assets/mp4/mixkit-forest-in-the-mountains-para-mobile.mp4'
-  ] : [
+  const playlist = [
     './assets/mp4/mixkit-natural-landscape-in-an-aerial-view-around-a-forest-41378-full-hd.mp4',
     './assets/mp4/mixkit-forest-in-the-mountains-aerial-view-1764-full-hd.mp4'
   ];
@@ -55,3 +52,11 @@ if (isIOS) {
     heroVideo.play().catch(() => {});
   });
 }
+
+// const playlist = isMobile ? [
+//     './assets/mp4/Mixkit-Natural-Landscape-para-mobile.mp4',
+//     './assets/mp4/mixkit-forest-in-the-mountains-para-mobile.mp4'
+//   ] : [
+//     './assets/mp4/mixkit-natural-landscape-in-an-aerial-view-around-a-forest-41378-full-hd.mp4',
+//     './assets/mp4/mixkit-forest-in-the-mountains-aerial-view-1764-full-hd.mp4'
+//   ];
