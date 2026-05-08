@@ -3,6 +3,6 @@
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
       if (y < window.innerHeight) {
-        heroMedia.style.transform = `translateY(${y * 0.38}px)`;
+        heroMedia.style.transform = `translateY(${y * 0.6}px)`;
       }
     }, { passive: true });

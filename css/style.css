@@ -15,3 +15,10 @@
 @import url(./index/animations.css);
 @import url(./index/responsive.css);
 
+/* CONTATO */
+@import url(./contato/contactinfo.css);
+@import url(./contato/contactleft.css);
+@import url(./contato/form.css);
+@import url(./contato/contactanimations.css);
+@import url(./contato/contactresponsive.css);
+

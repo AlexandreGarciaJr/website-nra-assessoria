@@ -24,10 +24,11 @@
       overflow: hidden;
       border: 1px solid var(--border);
       transition: box-shadow var(--ease), border-color var(--ease);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       position: relative;
     }
     .serv-card:hover {
-      box-shadow: var(--shadow-lg);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       border-color: var(--green);
       z-index: 2;
     }
@@ -112,11 +113,13 @@
       background: var(--bg-light);
       border: 1px solid var(--border);
       overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       transition: border-color var(--ease), box-shadow var(--ease);
     }
     .outro-card:hover {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       border-color: var(--green);
-      box-shadow: var(--shadow-lg);
+      z-index: 2;
     }
 
     /* Foto pequena no topo */

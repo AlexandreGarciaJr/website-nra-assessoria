@@ -16,7 +16,7 @@ if (alreadyLoaded) {
     el.style.animationPlayState = 'paused';
   });
 
-  const minTime = new Promise(r => setTimeout(r, 3000));
+  const minTime = new Promise(r => setTimeout(r, 4000));
   const pageLoad = new Promise(r => {
     if (document.readyState === 'complete') r();
     else window.addEventListener('load', r);
