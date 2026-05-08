@@ -1,6 +1,6 @@
 ### NRA Assessoria
 
-- #### Site para empresa de Assessoria ambiental.
+- #### Website para empresa de Assessoria ambiental.
 
 ### Tecnologias:
 
