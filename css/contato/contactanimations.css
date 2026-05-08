@@ -5,7 +5,7 @@
     .reveal {
       opacity: 0;
       transform: translateY(50px);
-      transition: opacity 1.5s ease, transform 1.5s ease;
+      transition: opacity 1.0s ease, transform 1.0s ease;
     }
 
     .reveal.in {
