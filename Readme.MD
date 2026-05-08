@@ -1,6 +1,6 @@
-### NRA Assessoria
+### NRA Assessoria em Recursos Naturais
 
-- #### Website para empresa de Assessoria ambiental.
+- #### Website para empresa de Assessoria ambiental, Geologia e Geofísica.
 
 ### Tecnologias:
 
