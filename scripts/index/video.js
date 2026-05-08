@@ -26,23 +26,25 @@
 const heroVideo = document.getElementById('hero-video');
 const heroFallback = document.querySelector('.hero-fallback');
 
-// iOS bloqueia autoplay — mostra fallback direto
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+const isMobile = window.innerWidth < 800;
 
 if (isIOS) {
   heroVideo.style.display = 'none';
   heroFallback.style.zIndex = '1';
 } else {
-  const playlist = [
+  const playlist = isMobile ? [
     './assets/mp4/Mixkit-Natural-Landscape-para-mobile.mp4',
     './assets/mp4/mixkit-forest-in-the-mountains-para-mobile.mp4'
+  ] : [
+    './assets/mp4/mixkit-natural-landscape-in-an-aerial-view-around-a-forest-41378-full-hd.mp4',
+    './assets/mp4/mixkit-forest-in-the-mountains-aerial-view-1764-full-hd.mp4'
   ];
 
   let heroIndex = 0;
   heroVideo.src = playlist[0];
   heroVideo.load();
   heroVideo.play().catch(() => {
-    // Se falhar mesmo assim, mostra fallback
     heroVideo.style.display = 'none';
     heroFallback.style.zIndex = '1';
   });
