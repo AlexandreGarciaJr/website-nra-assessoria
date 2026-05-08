@@ -19,6 +19,6 @@
 
 ### Visualização:
 
-https://alexandregarciajr.github.io/landingpage-nra-assessoria/
+https://alexandregarciajr.github.io/website-nra-assessoria
 
 
