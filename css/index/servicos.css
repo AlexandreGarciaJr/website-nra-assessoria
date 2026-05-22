@@ -15,7 +15,7 @@
     .serv-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.2rem;
+      gap: 1.5rem;
     }
     .serv-card {
       background: var(--bg-light);
@@ -60,7 +60,7 @@
       backdrop-filter: blur(4px);
     }
     .serv-body {
-      padding: 2rem 2.2rem;
+      padding: 1.2rem 1.4rem 1.6rem;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -168,7 +168,7 @@
 
     /* Conteúdo */
     .outro-body {
-      padding: 1.6rem 2rem 2rem;
+      padding: 1.2rem 1.4rem 1.6rem;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -221,5 +221,5 @@
     .outros-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.2rem;
+      gap: 1.5rem;
     }

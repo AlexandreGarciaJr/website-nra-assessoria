@@ -1,6 +1,7 @@
 /* =============================================
-       RESPONSIVE
-    ============================================= */
+   RESPONSIVE
+============================================= */
+
 @media (max-width: 1100px) {
   .sobre-inner {
     gap: 4rem;
@@ -15,6 +16,21 @@
 @media (max-width: 900px) {
   .sobre-inner {
     grid-template-columns: 1fr;
+  }
+
+  .apres-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .apres-img-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .apres-img-caption {
+    bottom: -1rem;
+    right: 0;
   }
 
   .serv-grid {
@@ -32,7 +48,7 @@
 
 @media (max-width: 768px) {
   #header {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 
   .desktop-nav {
@@ -43,38 +59,60 @@
     display: flex;
   }
 
-  /* Seções principais — padding lateral e vertical uniformes */
+  /* Seções principais — padding lateral uniforme */
   #sobre,
+  #apresentacao,
   #consultoria,
   footer {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   #sobre,
+  #apresentacao,
   #consultoria {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
 
-  /* Serviços: o padding lateral vive em .serv-inner e .outros-inner */
+  /* Apresentação */
+  .apres-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .apres-img-wrap {
+    max-width: 100%;
+  }
+
+  .apres-img-caption {
+    bottom: -1rem;
+    right: 0;
+  }
+
+  .apres-text p:first-of-type {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Serviços */
   #servicos {
     padding-top: 5rem;
     padding-bottom: 0;
   }
 
   .serv-inner {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .serv-inner .section-header {
     margin-bottom: 3rem;
   }
 
-  /* Outros Serviços — mesmo padding lateral + vertical que as demais seções */
+  /* Outros Serviços */
   .outros-inner {
-    padding: 5rem 1.5rem 5rem;
+    padding: 5rem 2rem 5rem;
     margin-top: 3rem;
   }
 
