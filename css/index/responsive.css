@@ -86,8 +86,8 @@
   }
 
   .apres-img-caption {
-    bottom: -1rem;
-    right: 0;
+    bottom: -0.75rem;
+    right: -0.75rem;
   }
 
   .apres-text p:first-of-type {
