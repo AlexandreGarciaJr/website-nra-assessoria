@@ -1,225 +1,119 @@
+/* =============================================
+   SERVIÇOS
+============================================= */
+#servicos {
+  padding: 9rem 0 9rem;
+  background: var(--bg-light);
+}
+.serv-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+.serv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.serv-card {
+  background: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow var(--ease), border-color var(--ease);
+  box-shadow: rgba(0,0,0,0.16) 0px 3px 6px, rgba(0,0,0,0.23) 0px 3px 6px;
+  position: relative;
+}
+.serv-card:hover {
+  border-color: var(--green);
+  z-index: 2;
+}
+.serv-img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+}
+.serv-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(0.78) brightness(0.96);
+  transition: transform 0.65s ease, filter 0.65s ease;
+}
+.serv-card:hover .serv-img img {
+  transform: scale(1.07);
+  filter: saturate(1) brightness(1);
+}
+.serv-num {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  font-family: var(--ff-display);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  padding: 0.25rem 0.6rem;
+  backdrop-filter: blur(4px);
+}
+.serv-body {
+  padding: 1.2rem 1.4rem 1.6rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+.serv-body h3 {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.9rem;
+  line-height: 1.2;
+}
+.serv-body p {
+  font-size: 0.85rem;
+  line-height: 1.78;
+  color: var(--text-mid);
+  flex: 1;
+}
+.serv-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+  margin-top: 0.2rem;
+}
+.serv-list li {
+  font-size: 0.83rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.serv-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.57em;
+  width: 4px; height: 4px;
+  background: var(--green);
+  border-radius: 50%;
+}
 
-
-    /* =============================================
-       SERVIÇOS
-    ============================================= */
-    #servicos {
-      padding: 9rem 0 0;
-      background: var(--bg-light);
-    }
-    .serv-inner {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 0 3rem;
-    }
-    .serv-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-    .serv-card {
-      background: var(--bg-light);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: box-shadow var(--ease), border-color var(--ease);
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      position: relative;
-    }
-    .serv-card:hover {
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      border-color: var(--green);
-      z-index: 2;
-    }
-    .serv-img {
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      position: relative;
-    }
-    .serv-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      filter: saturate(0.78) brightness(0.96);
-      transition: transform 0.65s ease, filter 0.65s ease;
-    }
-    .serv-card:hover .serv-img img {
-      transform: scale(1.07);
-      filter: saturate(1) brightness(1);
-    }
-    .serv-num {
-      position: absolute;
-      top: 1rem; left: 1rem;
-      font-family: var(--ff-display);
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      color: #fff;
-      background: rgba(0,0,0,0.4);
-      padding: 0.25rem 0.6rem;
-      backdrop-filter: blur(4px);
-    }
-    .serv-body {
-      padding: 1.2rem 1.4rem 1.6rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      border-top: 1px solid var(--border);
-    }
-    .serv-body h3 {
-      font-family: var(--ff-display);
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: var(--text-dark);
-      margin-bottom: 0.9rem;
-      line-height: 1.2;
-    }
-    .serv-body p {
-      font-size: 0.85rem;
-      line-height: 1.78;
-      color: var(--text-mid);
-      flex: 1;
-    }
-
-    /* ─── OUTROS SERVIÇOS ─── */
-    .outros-inner {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 5rem 3rem 9rem;
-      border-top: 1px solid var(--border);
-      margin-top: 5rem;
-    }
-    .outros-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1.4rem;
-      margin-bottom: 3rem;
-    }
-    .outros-header .section-tag { margin-bottom: 0; }
-    .outros-header h2 {
-      font-family: var(--ff-display);
-      font-size: clamp(1.5rem, 2.4vw, 2rem);
-      font-weight: 400;
-      color: var(--text-dark);
-    }
-    .outros-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.2rem;
-    }
-    .outro-card {
-      display: flex;
-      flex-direction: column;
-      background: var(--bg-light);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      transition: border-color var(--ease), box-shadow var(--ease);
-    }
-    .outro-card:hover {
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      border-color: var(--green);
-      z-index: 2;
-    }
-
-    /* Foto pequena no topo */
-    .outro-img {
-      position: relative;
-      aspect-ratio: 16/7;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    .outro-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      filter: saturate(0.72) brightness(0.92);
-      transition: transform 0.65s ease, filter 0.65s ease;
-    }
-    .outro-card:hover .outro-img img {
-      transform: scale(1.07);
-      filter: saturate(0.95) brightness(1);
-    }
-    /* Overlay escuro na foto */
-    .outro-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 40%, rgba(18,28,22,0.55) 100%);
-      pointer-events: none;
-    }
-    /* Ícone sobreposto no canto inferior da foto */
-    .outro-icon {
-      position: absolute;
-      bottom: 1rem; left: 1.2rem;
-      z-index: 1;
-      width: 40px; height: 40px;
-      background: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      transition: background var(--ease), transform var(--ease);
-    }
-    .outro-icon svg { width: 18px; height: 18px; }
-    .outro-card:hover .outro-icon {
-      background: var(--green-dark);
-      transform: scale(1.08);
-    }
-
-    /* Conteúdo */
-    .outro-body {
-      padding: 1.2rem 1.4rem 1.6rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      border-top: 1px solid var(--border);
-    }
-    .outro-body h3 {
-      font-family: var(--ff-display);
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--text-dark);
-      margin-bottom: 0.8rem;
-      line-height: 1.25;
-    }
-    .outro-desc {
-      font-size: 0.84rem;
-      line-height: 1.75;
-      color: var(--text-mid);
-    }
-    .outro-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.42rem;
-    }
-    .outro-list li {
-      font-size: 0.83rem;
-      color: var(--text-mid);
-      line-height: 1.5;
-      padding-left: 1.1rem;
-      position: relative;
-    }
-    .outro-list li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0.57em;
-      width: 4px; height: 4px;
-      background: var(--green);
-      border-radius: 50%;
-    }
-
-    /* =============================================
-       OUTROS SERVIÇOS
-    ============================================= */
-    .outros-inner {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 5rem 3rem 9rem;
-      border-top: 1px solid var(--border);
-    }
-    .outros-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
+.serv-img .serv-icon {
+  position: absolute;
+  bottom: 1rem; left: 1.2rem;
+  z-index: 1;
+  width: 38px; height: 38px;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background var(--ease), transform var(--ease);
+}
+.serv-img .serv-icon svg { width: 17px; height: 17px; }
+.serv-card:hover .serv-img .serv-icon {
+  background: var(--green-dark);
+  transform: scale(1.08);
+}
