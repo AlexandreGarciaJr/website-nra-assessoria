@@ -8,7 +8,7 @@ const gridGroups = [
 gridGroups.forEach(({ selector, cols }) => {
   document.querySelectorAll(selector).forEach((el, i) => {
     el.classList.add('reveal');
-    el.style.transitionDelay = `${(i % cols) * 0.5}s`;
+    el.style.transitionDelay = `${(i % cols) * 0.3}s`;
   });
 });
 
