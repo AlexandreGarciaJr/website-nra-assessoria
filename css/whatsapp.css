@@ -1,0 +1,114 @@
+/* =============================================
+   WHATSAPP FLOAT
+============================================= */
+.whatsapp-wrap {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 900;
+}
+
+/* Pulso fica FORA do overflow:hidden do botão */
+.whatsapp-pulse {
+  position: absolute;
+  top: 0; left: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  background: transparent;
+  animation: whatsappPulse 2.2s ease-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.whatsapp-float {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  width: 56px;
+  background: var(--green);
+  border-radius: 28px;
+  box-shadow: 0 6px 22px rgba(18,28,22,0.28);
+  cursor: pointer;
+  overflow: hidden;
+  transition: width var(--ease), background var(--ease),
+              transform var(--ease), box-shadow var(--ease);
+}
+
+.whatsapp-float:hover {
+  background: var(--green-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(18,28,22,0.35);
+}
+
+.whatsapp-float.expanded {
+  width: 192px;
+}
+
+.wa-icon-wrap {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wa-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+  color: #fff;
+}
+
+.wa-label {
+  white-space: nowrap;
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity var(--ease), transform var(--ease);
+  padding-right: 1.3rem;
+}
+.whatsapp-float.expanded .wa-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Pulso some quando expande */
+.whatsapp-wrap:has(.whatsapp-float.expanded) .whatsapp-pulse {
+  display: none;
+}
+
+@keyframes whatsappPulse {
+  0%   { transform: scale(1);    opacity: 0.3; }
+  100% { transform: scale(1.6);  opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-wrap {
+    bottom: 1.2rem;
+    right: 1.2rem;
+  }
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+  }
+  .whatsapp-float.expanded {
+    width: 178px;
+  }
+  .wa-icon-wrap {
+    width: 52px;
+    height: 52px;
+  }
+  .wa-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+  }
+  .whatsapp-pulse {
+    width: 52px;
+    height: 52px;
+  }
+}

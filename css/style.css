@@ -4,6 +4,7 @@
 @import url(./header.css);
 @import url(./footer.css);
 @import url(./global.css);
+@import url(./whatsapp.css);
 
 /* INDEX */
 @import url(./index/hero.css);
