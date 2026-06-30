@@ -146,3 +146,33 @@
     gap: 2rem;
   }
 }
+
+@media (max-height: 700px) {
+  #home {
+    align-items: flex-start;
+    padding-top: 110px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 4.5vw, 5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-desc {
+    margin-bottom: 1.5rem;
+  }
+
+  .scroll-cue {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero-title {
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+  }
+}
