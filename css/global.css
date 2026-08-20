@@ -12,7 +12,9 @@
     ============================================= */
     :root {
       --bg-light:    #f6f3ee;
+      --bg-light2:   #e6e4e3;
       --bg-medium:   #ece8df;
+      --bg-lightdark:#cbdad1;
       --bg-dark:     #131c17;
       --bg-darker:   #0c1410;
 

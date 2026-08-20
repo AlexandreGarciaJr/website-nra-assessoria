@@ -2,31 +2,39 @@
    SERVIÇOS
 ============================================= */
 #servicos {
-  padding: 9rem 0 9rem;
+  padding: 9rem 0 0;
   background: var(--bg-light);
 }
+
 .serv-inner {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 3rem;
+  padding-bottom: 4rem;
 }
 .serv-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
-.serv-card {
+
+#servicos .serv-card {
   background: var(--bg-light);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--border);
-  transition: box-shadow var(--ease), border-color var(--ease);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition-delay: 0s !important;
   box-shadow: rgba(0,0,0,0.16) 0px 3px 6px, rgba(0,0,0,0.23) 0px 3px 6px;
   position: relative;
 }
-.serv-card:hover {
-  border-color: var(--green);
+
+#servicos .serv-card:hover {
+  border: 1px solid var(--green);
+  background: var(--bg-light2);
+  box-shadow: rgba(0,0,0,0.16) 3px 5px 6px, rgba(0,0,0,0.23) 3px 5px 6px;
+  transition-delay: 0s !important;
   z-index: 2;
 }
 .serv-img {
@@ -116,4 +124,10 @@
 .serv-card:hover .serv-img .serv-icon {
   background: var(--green-dark);
   transform: scale(1.08);
+}
+
+/* ─── Grupo 2: fundo diferenciado (regulatório/ambiental) ─── */
+.serv-secondary {
+  background: var(--bg-lightdark);
+  padding: 4rem 0
 }
